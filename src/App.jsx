@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
     <Navbar />
       <Routes>
-        <Route></Route>
+        <Route path="/" element={<Home />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>
