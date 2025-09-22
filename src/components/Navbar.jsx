@@ -17,7 +17,7 @@ export const Navbar = (props) => {
             </div>
             <div className="flex items-center space-x-4">
                 <Link to="/cart">
-                    <FaShoppingCart />
+                    <FaShoppingCart className="text-lg"/>
                 </Link>
                 <button className="hidden md:block">
                     Login | Register
