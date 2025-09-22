@@ -16,13 +16,13 @@ const Home = () => {
             ))}
           </ul>
         </div>
-        <div>
-          <img src={HeroImage} alt="" />
-          <div>
-            <p>Wyatt's eShop</p>
-            <h2>WELCOME</h2>
-            <p>MILLIONS of Products</p>
-            <button>SHOP NOW</button>
+        <div className="w-full md:w-9/12 mt-8 md:mt-0 h-96 relative">
+          <img src={HeroImage} alt="" className="h-full w-full" />
+          <div className="absolute top-16 left-8">
+            <p className="text-white mb-4">Wyatt's eShop</p>
+            <h2 className="text-white text-3x1 font-bold">WELCOME</h2>
+            <p className="text-xl mt-2.5 font-bold text-white">MILLIONS of Products</p>
+            <button className="bg-red-600 px-8 py-1.5 text-white mt-4 hover:bg-red-700 transform transition-transform duration-300 hover:scale-105">SHOP NOW</button>
           </div>
         </div>
       </div>
