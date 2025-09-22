@@ -12,7 +12,7 @@ const InfoSection = () => {
     {
       icon: <FaShippingFast className="text-3x1 text-red-600" />,
       title: "Free Shipping",
-      description: "Get your orders delivered with no extra cost",
+      description: "Get your orders delivered at no extra cost",
     },
     {
       icon: <FaHeadset className="text-3x1 text-red-600" />,
@@ -22,7 +22,7 @@ const InfoSection = () => {
     {
       icon: <FaMoneyBillWave className="text-3x1 text-red-600" />,
       title: "100% Money Back",
-      description: "Receive a full refund if you are not satisfied",
+      description: "Receive a full refund if you are not fully satisfied",
     },
     {
       icon: <FaLock className="text-3x1 text-red-600" />,
@@ -35,16 +35,17 @@ const InfoSection = () => {
       description: "Enjoy the best prices on our products",
     },
   ];
+
   return (
-    <div>
-      <div>
-        {infoItems.map((item, index) => {
-          <div>
+    <div className="bg-white pb-8 pt-12">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+        {infoItems.map((item, index) => (
+          <div key={index} className="flex flex-col items-center text-center p-4 border rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 cursor-pointer">
             {item.icon}
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-          </div>;
-        })}
+            <h3 className="mt-4 txt-xl font-semibold">{item.title}</h3>
+            <p className="mt-2 text-gray-600">{item.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
