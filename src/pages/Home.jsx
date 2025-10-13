@@ -16,6 +16,7 @@ const Home = () => {
   }, [])
 
   return (
+    <div>
     <div className="bg-white mt-2 px-4 md:px-16 lg:px-24">
       <div className="container mx-auto py-4 flex flex-col md:flex-row space-x-2">
         <div className="w-full md:w-3/12 ">
@@ -49,7 +50,8 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <Shop />
+    </div>
+    <Shop />
     </div>
   );
 };
