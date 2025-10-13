@@ -38,7 +38,7 @@ const Footer = () => {
             <a href='' className='hover:text-gray-400'><FaLinkedin /></a>
           </div>
           <form className='flex items-center justify-center mt-8'>
-            <input type='email' placeholder='Enter email' className='w-full p-2 rounded-l-lg bg-grat-800 border border-gray-600'/>
+            <input type='email' placeholder='Enter email' className='w-full p-2 rounded-l-lg bg-gray-800 border border-gray-600'/>
             <button className='bg-red-600 text-white px-4 py-2 rounded-r-lg border border-gray-600'>Subscribe</button>
           </form>
         </div>
