@@ -6,6 +6,7 @@ import CategorySection from "../components/CategorySection";
 import { setProducts } from "../redux/productSlice";
 import { useDispatch, useSelector } from "react-redux";
 import ProductCard from "../components/ProductCard";
+import Shop from "./Shop";
 
 const Home = () => {
   const dispatch = useDispatch()
@@ -48,6 +49,7 @@ const Home = () => {
           ))}
         </div>
       </div>
+      <Shop />
     </div>
   );
 };
