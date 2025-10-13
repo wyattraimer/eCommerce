@@ -31,7 +31,7 @@ export const Navbar = (props) => {
             <Link to="/" className="hover:underline">
                 Home
             </Link>
-            <Link to="/" className="hover:underline">
+            <Link to="/shop" className="hover:underline">
                 Shop
             </Link>
             <Link to="/" className="hover:underline">
