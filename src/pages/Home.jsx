@@ -43,7 +43,7 @@ const Home = () => {
         <h2>Top Products</h2>
         <div>
           {products.products.slice(0,5).map((product) => (
-            <div>{product.title}</div>
+            <div>{product.name}</div>
           ))}
         </div>
       </div>
