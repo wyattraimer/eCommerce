@@ -22,61 +22,61 @@ export const mockData = [
     {
         id: 1,
         image: Image1,
-        name: "Product 1",
+        name: "Leather Backpack",
         price: 79.99
     },
     {
         id: 2,
         image: Image2,
-        name: "Product 2",
+        name: "Silk Black Bikini",
         price: 39.99
     },
     {
         id: 3,
         image: Image3,
-        name: "Product 3",
+        name: "J Sound Earbuds",
         price: 49.99
     },
     {
         id: 4,
         image: Image4,
-        name: "Product 4",
+        name: "Fishman Cap",
         price: 29.99
     },
     {
         id: 5,
         image: Image5,
-        name: "Product 5",
+        name: "Minow Lure",
         price: 19.99
     },
     {
         id: 6,
         image: Image6,
-        name: "Product 6",
+        name: "Designer Purse",
         price: 99.99
     },
     {
         id: 7,
         image: Image7,
-        name: "Product 7",
+        name: "T-14 Reel",
         price: 69.99
     },
     {
         id: 8,
         image: Image8,
-        name: "Product 8",
+        name: "Silicon Ring",
         price: 9.99
     },
     {
         id: 9,
         image: Image9,
-        name: "Product 9",
+        name: "Adiada S12",
         price: 89.99
     },
     {
         id: 10,
         image: Image10,
-        name: "Product 10",
+        name: "Rayman UV Sunglasses",
         price: 24.99
     },
 ]
