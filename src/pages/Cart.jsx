@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import EmptyCart from '../assets/Images/emptycart.png'
 import { FaTrashAlt } from 'react-icons/fa'
 import Modal from '../components/Modal';
+import ChangeAddress from '../components/ChangeAddress';
 
 const Cart = () => {
     const cart = useSelector(state => state.cart);
@@ -85,6 +86,7 @@ const Cart = () => {
                     isModalOpen = {isModalOpen}
                     setIsModalOpen = {setIsModalOpen}
                 >
+                    <ChangeAddress />
                 </Modal>
             </div>
             : (
