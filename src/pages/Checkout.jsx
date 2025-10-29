@@ -3,6 +3,7 @@ import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 
 const Checkout = () => {
   const [billingToggle, setBillingToggle] = useState(true);
+  const [shippingToggle, setShippingToggle] = useState(false);
   return (
     <div className="container mx-auto py-8 min-h-96 px-4 md:px-16 lg:px-24">
       <h3 className="text-2xl font-semibold mb-4">Checkout</h3>
@@ -16,7 +17,7 @@ const Checkout = () => {
               <h3 className="text-lg font-semibold mb-2">
                 Billing Information
               </h3>
-              {billingToggle ? <FaAngleDown /> : <FaAngleUp />}
+              {billingToggle ? <FaAngleUp /> : <FaAngleDown />}
             </div>
 
             <div className={`space-y-4 ${billingToggle ? "" : "hidden"}`}>
@@ -29,7 +30,6 @@ const Checkout = () => {
                   className="w-full px-3 py-2 border"
                 />
               </div>
-
               <div>
                 <div>
                   <label className="block text-gray-700">Email</label>
@@ -41,7 +41,6 @@ const Checkout = () => {
                   />
                 </div>
               </div>
-
               <div>
                 <div>
                   <label className="block text-gray-700">Phone</label>
@@ -55,6 +54,53 @@ const Checkout = () => {
               </div>
             </div>
           </div>
+          
+          <div className="border p-2 mb-6">
+            <div
+              className="flex items-center justify-between"
+              onClick={() => setShippingToggle(!shippingToggle)}
+            >
+              <h3 className="text-lg font-semibold mb-2">
+                Shipping Information
+              </h3>
+              {shippingToggle ? <FaAngleUp /> : <FaAngleDown />}
+            </div>
+
+            <div className={`space-y-4 ${shippingToggle ? "" : "hidden"}`}>
+              <div>
+                <label className="block text-gray-700">Address</label>
+                <input
+                  type="text"
+                  name="address"
+                  placeholder="Enter Address"
+                  className="w-full px-3 py-2 border"
+                />
+              </div>
+              <div>
+                <div>
+                  <label className="block text-gray-700">City</label>
+                  <input
+                    type="text"
+                    name="city"
+                    placeholder="Enter City"
+                    className="w-full px-3 py-2 border"
+                  />
+                </div>
+              </div>
+              <div>
+                <div>
+                  <label className="block text-gray-700">Zip Code</label>
+                  <input
+                    type="text"
+                    name="zipcode"
+                    placeholder="Enter Zip Code"
+                    className="w-full px-3 py-2 border"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         <div className="md:w-1/3 bg-white p-6 rounded-lg shadow-md border"></div>
