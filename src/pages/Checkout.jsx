@@ -29,29 +29,29 @@ const Checkout = () => {
                   className="w-full px-3 py-2 border"
                 />
               </div>
-            </div>
 
-            <div>
               <div>
-                <label className="block text-gray-700">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Enter Email"
-                  className="w-full px-3 py-2 border"
-                />
+                <div>
+                  <label className="block text-gray-700">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter Email"
+                    className="w-full px-3 py-2 border"
+                  />
+                </div>
               </div>
-            </div>
 
-            <div>
               <div>
-                <label className="block text-gray-700">Phone</label>
-                <input
-                  type="text"
-                  name="phone"
-                  placeholder="Enter Phone Number"
-                  className="w-full px-3 py-2 border"
-                />
+                <div>
+                  <label className="block text-gray-700">Phone</label>
+                  <input
+                    type="text"
+                    name="phone"
+                    placeholder="Enter Phone Number"
+                    className="w-full px-3 py-2 border"
+                  />
+                </div>
               </div>
             </div>
           </div>
