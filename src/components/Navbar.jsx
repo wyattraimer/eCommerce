@@ -7,7 +7,7 @@ import Login from "./Login";
 import Register from "./Register";
 
 export const Navbar = (props) => {
-    const [isModalOpen, setIsModelOpen] = useState(false)
+    const [isModalOpen, setIsModalOpen] = useState(false)
     const [isLogin, setIsLogin] = useState(true)
 
     const products = useSelector(state => state.cart.products)
@@ -34,7 +34,7 @@ export const Navbar = (props) => {
                 </Link>
                 <button 
                     className="hidden md:block"
-                    onClick={() => setIsModelOpen(true)}
+                    onClick={() => setIsModalOpen(true)}
                 >
                     Login | Register
                 </button>
@@ -57,7 +57,7 @@ export const Navbar = (props) => {
                 About
             </Link>
         </div>
-        <Modal isModalOpen={isModalOpen} setIsModelOpen={setIsModelOpen}>
+        <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}>
             {isLogin ? <Login /> : <Register />}
         </Modal>
     </nav>
