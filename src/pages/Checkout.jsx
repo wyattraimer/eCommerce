@@ -211,7 +211,7 @@ const Checkout = () => {
                   <div className="ml-4">
                     <h4 className="text-md font-semibold">{product.name}</h4>
                     <p className="text-gray-600">
-                      &{product.price} x {product.quantity}
+                      {product.price} x {product.quantity}
                     </p>
                   </div>
                 </div>
