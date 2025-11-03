@@ -1,6 +1,6 @@
 import React from "react";
 
-const Login = () => {
+const Login = ({ openSignUp }) => {
   return (
     <div>
       <h2 className="text-2xl font-bold mb-4">Login</h2>
@@ -38,7 +38,9 @@ const Login = () => {
       </form>
       <div className="text-center">
         <span className="text-gray-700">Don't have an account? </span>
-        <button className="text-red-800">Sign Up.</button>
+        <button className="text-red-800" onClick={openSignUp}>
+          Sign Up
+        </button>
       </div>
     </div>
   );

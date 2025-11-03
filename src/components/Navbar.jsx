@@ -10,6 +10,16 @@ export const Navbar = (props) => {
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [isLogin, setIsLogin] = useState(true)
 
+    const openSignUp = () => {
+        setIsLogin(false)
+        setIsModalOpen(true)
+    }
+
+    const openLogin = () => {
+        setIsLogin(true)
+        setIsModalOpen(true)
+    }
+
     const products = useSelector(state => state.cart.products)
     return (
     <nav className="bg=white shadow-md">
@@ -58,7 +68,7 @@ export const Navbar = (props) => {
             </Link>
         </div>
         <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}>
-            {isLogin ? <Login /> : <Register />}
+            {isLogin ? <Login openSignUp={openSignUp}/> : <Register openLogin={openLogin}/>}
         </Modal>
     </nav>
     );
