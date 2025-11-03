@@ -8,6 +8,11 @@ const Checkout = () => {
   const [paymentToggle, setPaymentToggle] = useState(false);
 
   const [paymentMethod, setPaymentMethod] = useState("cod");
+  const [shippingInfo, setShippingInfo] = useState({
+    address: "",
+    city: "",
+    zip: "",
+  })
 
   const cart = useSelector((state) => state.cart);
 
@@ -81,6 +86,7 @@ const Checkout = () => {
                   name="address"
                   placeholder="Enter Address"
                   className="w-full px-3 py-2 border"
+                  onChange={(e) => setShippingInfo({...shippingInfo, address: e.target.value})}
                 />
               </div>
               <div>
@@ -91,6 +97,7 @@ const Checkout = () => {
                     name="city"
                     placeholder="Enter City"
                     className="w-full px-3 py-2 border"
+                    onChange={(e) => setShippingInfo({...shippingInfo, city: e.target.value})}
                   />
                 </div>
               </div>
@@ -102,6 +109,7 @@ const Checkout = () => {
                     name="zipcode"
                     placeholder="Enter Zip Code"
                     className="w-full px-3 py-2 border"
+                    onChange={(e) => setShippingInfo({...shippingInfo, zip: e.target.value})}
                   />
                 </div>
               </div>
