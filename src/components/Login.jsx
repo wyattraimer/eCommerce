@@ -24,10 +24,10 @@ const Login = () => {
         <div className="mb-4 flex items-center justify-between">
           <label className="inline-flex items-center">
             <input type="checkbox" className="form-checkbox" />
-            <span className="ml-2 text-gray-700">Remember Me</span>
+            <span className="ml-2 text-gray-700">Remember me</span>
           </label>
           <a href="#" className="text-red-800">
-            Forgot Password?
+            Forgot password?
           </a>
         </div>
         <div className="mb-4">
@@ -37,8 +37,8 @@ const Login = () => {
         </div>
       </form>
       <div className="text-center">
-        <span className="text-gray-700">Don't Have an Account?</span>
-        <button className="text-red-800">Sign Up</button>
+        <span className="text-gray-700">Don't have an account? </span>
+        <button className="text-red-800">Sign Up.</button>
       </div>
     </div>
   );
