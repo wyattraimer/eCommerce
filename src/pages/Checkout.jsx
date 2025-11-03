@@ -3,7 +3,7 @@ import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-const Checkout = ({setOrder}) => {
+const Checkout = ({ setOrder }) => {
   const [billingToggle, setBillingToggle] = useState(true);
   const [shippingToggle, setShippingToggle] = useState(false);
   const [paymentToggle, setPaymentToggle] = useState(false);
@@ -20,14 +20,14 @@ const Checkout = ({setOrder}) => {
 
   const handleOrder = () => {
     const newOrder = {
-      products: cart.products.product,
-      orderNumber: "123456",
-      shippinfInformation: shippingInfo,
+      products: cart.products,
+      orderNumber: "12345",
+      shippingInformation: shippingInfo,
       totalPrice: cart.totalPrice,
-    }
-    setOrder(newOrder)
-    navigate('/order-confirmation')
-  }
+    };
+    setOrder(newOrder);
+    navigate("/order-confirmation");
+  };
 
   return (
     <div className="container mx-auto py-8 min-h-96 px-4 md:px-16 lg:px-24">
@@ -99,7 +99,9 @@ const Checkout = ({setOrder}) => {
                   name="address"
                   placeholder="Enter Address"
                   className="w-full px-3 py-2 border"
-                  onChange={(e) => setShippingInfo({...shippingInfo, address: e.target.value})}
+                  onChange={(e) =>
+                    setShippingInfo({ ...shippingInfo, address: e.target.value })
+                  }
                 />
               </div>
               <div>
@@ -110,7 +112,9 @@ const Checkout = ({setOrder}) => {
                     name="city"
                     placeholder="Enter City"
                     className="w-full px-3 py-2 border"
-                    onChange={(e) => setShippingInfo({...shippingInfo, city: e.target.value})}
+                    onChange={(e) =>
+                      setShippingInfo({ ...shippingInfo, city: e.target.value })
+                    }
                   />
                 </div>
               </div>
@@ -122,7 +126,9 @@ const Checkout = ({setOrder}) => {
                     name="zip"
                     placeholder="Enter Zip Code"
                     className="w-full px-3 py-2 border"
-                    onChange={(e) => setShippingInfo({...shippingInfo, zip: e.target.value})}
+                    onChange={(e) =>
+                      setShippingInfo({ ...shippingInfo, zip: e.target.value })
+                    }
                   />
                 </div>
               </div>
@@ -224,8 +230,8 @@ const Checkout = ({setOrder}) => {
             {cart.products.map((product) => (
               <div className="flex items-center">
                 <div>
-                  <img 
-                    src={product.image} 
+                  <img
+                    src={product.image}
                     alt={product.name}
                     className="w-16 h-16 object-contain rounded"
                   />
@@ -250,7 +256,7 @@ const Checkout = ({setOrder}) => {
               </span>
             </div>
           </div>
-          <button 
+          <button
             className="w-full bg-red-600 text-white py-2 mt-6 hover:bg-red-800"
             onClick={handleOrder}
           >
