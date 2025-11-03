@@ -106,7 +106,7 @@ const Checkout = () => {
                   <label className="block text-gray-700">Zip Code</label>
                   <input
                     type="text"
-                    name="zipcode"
+                    name="zip"
                     placeholder="Enter Zip Code"
                     className="w-full px-3 py-2 border"
                     onChange={(e) => setShippingInfo({...shippingInfo, zip: e.target.value})}
