@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
 const Checkout = () => {
   const [billingToggle, setBillingToggle] = useState(true);
@@ -7,6 +8,8 @@ const Checkout = () => {
   const [paymentToggle, setPaymentToggle] = useState(false);
 
   const [paymentMethod, setPaymentMethod] = useState("cod");
+
+  const cart = useSelector((state) => state.cart);
 
   return (
     <div className="container mx-auto py-8 min-h-96 px-4 md:px-16 lg:px-24">
@@ -133,7 +136,9 @@ const Checkout = () => {
                   checked={paymentMethod === "dc"}
                   onChange={() => setPaymentMethod("dc")}
                 />
-                <label className="block text-gray-700 ml-2">Debit/Credit Card</label>
+                <label className="block text-gray-700 ml-2">
+                  Debit/Credit Card
+                </label>
               </div>
               {paymentMethod === "dc" && (
                 <div className="bg-gray-100 p-4 rounded-lg mb-4">
@@ -144,7 +149,7 @@ const Checkout = () => {
                     <label className="block text-gray-700 font-semibold mb-2">
                       Card Number
                     </label>
-                    <input 
+                    <input
                       type="text"
                       placeholder="Enter Card Number"
                       className="border p-2 w-full rounded"
@@ -155,7 +160,7 @@ const Checkout = () => {
                     <label className="block text-gray-700 font-semibold mb-2">
                       Card Holder Name
                     </label>
-                    <input 
+                    <input
                       type="text"
                       placeholder="Enter Card Holder Name"
                       className="border p-2 w-full rounded"
@@ -167,7 +172,7 @@ const Checkout = () => {
                       <label className="block text-gray-700 font-semibold mb-2">
                         Expiration Date
                       </label>
-                      <input 
+                      <input
                         type="text"
                         placeholder="MM/YY"
                         className="border p-2 w-full rounded"
@@ -178,7 +183,7 @@ const Checkout = () => {
                       <label className="block text-gray-700 font-semibold mb-2">
                         CVV
                       </label>
-                      <input 
+                      <input
                         type="text"
                         placeholder="CVV"
                         className="border p-2 w-full rounded"
@@ -192,7 +197,31 @@ const Checkout = () => {
           </div>
         </div>
 
-        <div className="md:w-1/3 bg-white p-6 rounded-lg shadow-md border"></div>
+        <div className="md:w-1/3 bg-white p-6 rounded-lg shadow-md border">
+          <h3>Order Summary</h3>
+          <div>
+            {cart.products.map((product) => (
+              <div>
+                <div>
+                  <img src={product.image} alt="" />
+                  <div>
+                    <h4>{product.name}</h4>
+                    <p>
+                      &{product.price} x {product.quantity}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div>
+            <div>
+              <span>Total Price:</span>
+              <span>${cart.totalPrice.toFixed(2)}</span>
+            </div>
+          </div>
+          <button>Place Order</button>
+        </div>
       </div>
     </div>
   );
